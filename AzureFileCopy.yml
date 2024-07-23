@@ -6,17 +6,17 @@
     azureSubscription: # string. Alias: ConnectedServiceNameARM. Required. Azure Subscription. 
     Destination: # 'AzureBlob' | 'AzureVMs'. Required. Destination Type. 
     storage: # string. Alias: StorageAccountRM. Required. RM Storage Account. 
-    #ContainerName: # string. Required when Destination = AzureBlob. Container Name. 
-    #BlobPrefix: # string. Optional. Use when Destination = AzureBlob. Blob Prefix. 
-    #resourceGroup: # string. Alias: EnvironmentNameRM. Required when Destination = AzureVMs. Resource Group. 
-    #ResourceFilteringMethod: 'machineNames' # 'machineNames' | 'tags'. Optional. Use when Destination = AzureVMs. Select Machines By. Default: machineNames.
-    #MachineNames: # string. Optional. Use when Destination = AzureVMs. Filter Criteria. 
-    #vmsAdminUserName: # string. Required when Destination = AzureVMs. Admin Login. 
-    #vmsAdminPassword: # string. Required when Destination = AzureVMs. Password. 
-    #TargetPath: # string. Required when Destination = AzureVMs. Destination Folder. 
-    #AdditionalArgumentsForBlobCopy: # string. Optional Arguments (for uploading files to blob). 
-    #AdditionalArgumentsForVMCopy: # string. Optional. Use when Destination = AzureVMs. Optional Arguments (for downloading files to VM). 
-    #enableCopyPrerequisites: false # boolean. Optional. Use when Destination = AzureVMs. Enable Copy Prerequisites. Default: false.
-    #CopyFilesInParallel: true # boolean. Optional. Use when Destination = AzureVMs. Copy in Parallel. Default: true.
-    #CleanTargetBeforeCopy: false # boolean. Clean Target. Default: false.
-    #skipCACheck: true # boolean. Optional. Use when Destination = AzureVMs. Test Certificate. Default: true.
+    ContainerName: # string. Required when Destination = AzureBlob. Container Name. 
+    BlobPrefix: # string. Optional. Use when Destination = AzureBlob. Blob Prefix. 
+    resourceGroup: # string. Alias: EnvironmentNameRM. Required when Destination = AzureVMs. Resource Group. 
+    ResourceFilteringMethod: 'machineNames' # 'machineNames' | 'tags'. Optional. Use when Destination = AzureVMs. Select Machines By. Default: machineNames.
+    MachineNames: # string. Optional. Use when Destination = AzureVMs. Filter Criteria. 
+    vmsAdminUserName: # string. Required when Destination = AzureVMs. Admin Login. 
+    vmsAdminPassword: # string. Required when Destination = AzureVMs. Password. 
+    TargetPath: # string. Required when Destination = AzureVMs. Destination Folder. 
+    AdditionalArgumentsForBlobCopy: # string. Optional Arguments (for uploading files to blob). 
+    AdditionalArgumentsForVMCopy: # string. Optional. Use when Destination = AzureVMs. Optional Arguments (for downloading files to VM). 
+    enableCopyPrerequisites: false # boolean. Optional. Use when Destination = AzureVMs. Enable Copy Prerequisites. Default: false.
+    CopyFilesInParallel: true # boolean. Optional. Use when Destination = AzureVMs. Copy in Parallel. Default: true.
+    CleanTargetBeforeCopy: false # boolean. Clean Target. Default: false.
+    skipCACheck: true # boolean. Optional. Use when Destination = AzureVMs. Test Certificate. Default: true.
