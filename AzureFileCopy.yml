@@ -1,7 +1,6 @@
 # Azure file copy v6
 # Copy files to Azure Blob Storage or virtual machines.
 
-
 parameters:
 - name: 'SourcePath'
   type: string    
@@ -24,6 +23,23 @@ parameters:
   type: string 
 - name: 'vmsAdminUserName'
   type: string 
+- name: 'vmsAdminPassword'
+  type: string    
+- name: 'TargetPath'
+  type: string    
+- name: 'AdditionalArgumentsForBlobCopy'
+  type: string    
+- name: 'AdditionalArgumentsForVMCopy'
+  type: string    
+- name: 'enableCopyPrerequisites'
+  type: string 
+- name: 'CopyFilesInParallel'
+  type: string 
+- name: 'CleanTargetBeforeCopy'
+  type: string 
+- name: 'skipCACheck'
+  type: string 
+
 steps:
 - task: AzureFileCopy@6
   inputs:
@@ -37,11 +53,11 @@ steps:
     ResourceFilteringMethod: '${{parameters.ResourceFilteringMethod}}' 
     MachineNames: '${{parameters.MachineNames}}' 
     vmsAdminUserName: '${{parameters.vmsAdminUserName}}' 
-    vmsAdminPassword: '${{parameters.versionSpec}}' 
-    TargetPath: '${{parameters.versionSpec}}' 
-    AdditionalArgumentsForBlobCopy: '${{parameters.versionSpec}}'  
-    AdditionalArgumentsForVMCopy: '${{parameters.versionSpec}}' 
-    enableCopyPrerequisites: '${{parameters.versionSpec}}' 
-    CopyFilesInParallel: '${{parameters.versionSpec}}' 
-    CleanTargetBeforeCopy: '${{parameters.versionSpec}}' 
-    skipCACheck: '${{parameters.versionSpec}}' 
+    vmsAdminPassword: '${{parameters.vmsAdminPassword}}' 
+    TargetPath: '${{parameters.TargetPath}}' 
+    AdditionalArgumentsForBlobCopy: '${{parameters.AdditionalArgumentsForBlobCopy}}'  
+    AdditionalArgumentsForVMCopy: '${{parameters.AdditionalArgumentsForVMCopy}}' 
+    enableCopyPrerequisites: '${{parameters.enableCopyPrerequisites}}' 
+    CopyFilesInParallel: '${{parameters.CopyFilesInParallel}}' 
+    CleanTargetBeforeCopy: '${{parameters.CleanTargetBeforeCopy}}' 
+    skipCACheck: '${{parameters.skipCACheck}}' 
